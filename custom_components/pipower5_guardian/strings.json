@@ -1,0 +1,40 @@
+{
+  "title": "PiPower 5 Guardian",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect PiPower 5",
+        "description": "Battery protection is always enabled while this integration is loaded. At the effective threshold, two consecutive readings trigger graceful HAOS host shutdown. A higher board firmware threshold takes precedence. No firmware settings are changed.",
+        "data": {
+          "bus": "I\u00b2C bus",
+          "shutdown_percentage": "Mandatory shutdown threshold (%)",
+          "warning_percentage": "Low-battery warning threshold (%)",
+          "notification_script": "Shared notification script"
+        }
+      }
+    },
+    "error": {
+      "invalid_thresholds": "Warning must be above shutdown; shutdown must be 15\u201390%."
+    },
+    "abort": {
+      "already_configured": "This I\u00b2C board is already configured.",
+      "supervisor_required": "Home Assistant Supervisor with host shutdown is required."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Battery protection",
+        "description": "Battery protection is always enabled while this integration is loaded. At the effective threshold, two consecutive readings trigger graceful HAOS host shutdown. A higher board firmware threshold takes precedence. No firmware settings are changed.",
+        "data": {
+          "shutdown_percentage": "Mandatory shutdown threshold (%)",
+          "warning_percentage": "Low-battery warning threshold (%)",
+          "notification_script": "Shared notification script"
+        }
+      }
+    },
+    "error": {
+      "invalid_thresholds": "Warning must be above shutdown; shutdown must be 15\u201390%."
+    }
+  }
+}
